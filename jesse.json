@@ -1,0 +1,79 @@
+{
+	"games" : {
+		"COBIE" : {
+			instructions: "Use the arrow keys to move. Get to the right side of the screen to progress to the next level! Press Z to go into the level editor"
+			description: "A simple, yet difficult tile-based platformer game with a level editor."
+			notes: "This game is hard. I haven't finished it yet. The goal was to create a template game for a tile-based platformer."
+			credits: "Code by me. Art by me. Music from Nintendo. SFX from me and Nintendo."
+		}
+
+		"Robot Survival Game" : {
+			instructions: "Defeat the robots attacking you to get more money. Use the money to buy blocks and weapons. Try to survive all the robots! W: move up, S: move down, A: move left, D: move right, Q: open block menu, E: open weapon menu, space: place block, mouse: aim and attack with weapon, or select option"
+			description: "A wave-based survival game; parts skill and strategy. Fight close-range enemies with melee weapons and ranged enemies with ranged weapons."
+			notes: "My most finished game to date. I had a lot of fun making this, particularly with the wide range of weapons. Try to save enough money to get the lightsaber!"
+      credits: "Code by me. Art by me. SFX by me."
+    }
+
+		"Triangle Boss Game" : {
+			instructions: "Defeat the triangle by shooting the core. Arrow keys to move and jump. Mouse to aim and shoot."
+			description: "A platformer boss based off a cool idea I had. In most cases, you would have to destroy the body triangles before you get to attack the core."
+			notes: "I am very happy with the end result. The effects make the experience all the more exciting."
+			credits: "Code by me. Art by me. SFX by me. Music by me."
+
+		}
+
+		"Swimming Up the Food Chain" : {
+			instructions: "Eat anything edible and smaller than you to get larger. Avoid anything nonedible or larger than you. Left arrow to rotate counter-clockwise. Right arrow to rotate clockwise. Up arrow to accelerate. Space to eat."
+			description: "This is my most finished game. It is both satistying and terrifying. It is easy to progess through the first levels, but each level is harder than the last.
+			notes: "This game was made with the challenge to only use assets from the Scratch Library."
+			credits: "Code by me, Art and SFX from the Scratch Library."
+		}
+
+	}
+
+	"simulations" : {
+
+		"Polar Spinning Nodes" : {
+			instructions: "watch and enjoy the satisfying patterns."
+			description: "Each image has a number of nodes. These nodes adjust their distance from the center of the image according to their specific angle. A straight line is drawn from each node to the next. Because of the limited number of nodes, they create beautiful patterns based off whatever equation is put."
+			notes: "I skimmed through my Calculus I textbook before the class started. In it, I discovered polar shapes. Later, I came across a cylindrical bowl with one of those polar shapes in the middle, formed by the reflection of the light across the round inside of the bowl. Fascinated, I decided to create a simulation based off polar coordinates. I am very happy with the result."
+			credits: "Code by me."
+		}
+
+		"Tree Fractals" : {
+			instructions: "Watch and enjoy. Slide the sliders to create different patterns."
+			description: "This simulation makes fractals based off a specific number of branches, iterations, and angle. They usually end up looking like trees."
+			notes: "I have always enjoyed fractals and had wanted to create a simulation for a long time. One thing to note is that sometimes the simulation will not draw anything sometimes when it should. This is because as the number of iterations or branches increases, the time it takes to draw the simulation increases much faster; it has an exponential time complexity. If I took out the code that stopped the drawing, it would crash the browser.
+			credits: "Code by me."
+
+		}
+
+		"Math Color Patterns" : {
+			instructions: "Watch and enjoy. Slide the sliders to look at different patterns or change the resolution."
+			description: "The image is made of little squares. Each square follows the same set of rules. The rules determine what color the pixel should be based off its position, the time, or the mouse position."
+			notes: "It was fun using different math equations and seeing how they would translate to the screen."
+			credits : "Code by me."
+		}
+
+	}
+
+	"songs" : {
+		"Final Boss" : {
+			description: "A looping orchestral rock song that could be used as a song for a final boss in a video game. It almost uses a full orchestra, and has some traditional Chinese and Japanese instruments."
+			notes: "This was the first song I made that I was fully satisfied with."
+			credits: "Music by me."
+		}
+
+		"Ghost Theme" : {
+			description: "A looping song made that doesn't necessarily fit any genre, but I am very fond of it. The melody and instrument choices, particularly the toy piano and pipe organs, make it sound like a ghost theme. The drums add an interesting layer."
+			notes : "This is my first song that changes time signatures. I like the way it transitions back from 3/4 to 4/4."
+			credits: "Song by me. Some inspiration from Nintendo."
+		}
+
+		"Shop Theme" : {
+			description: "A looping song that I can only describe as waiting music. It can be used for a shop, an elevator, a waiting room, etc."
+			notes: "This is the first song that I wrote on guitar first."
+			credits : "Music by me. Inspiration from Nintendo."
+		}
+	}
+}
