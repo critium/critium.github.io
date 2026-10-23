@@ -12,7 +12,7 @@
     { group: "forj", name: "forj-http", base: "/forj-http/", github: "critium/forj-http",
       sections: ["api", "json"] },
     { group: "forj", name: "forj-http-plugins", base: "/forj-http-plugins/", github: "critium/forj-http-plugins",
-      sections: ["api"] },
+      sections: ["docs", "api"] },
     { name: "magnetite", href: "https://github.com/critium/magnetite", github: "critium/magnetite" },
   ];
 
