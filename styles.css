@@ -113,10 +113,6 @@ a { color: inherit; }
 .editor {
   min-width: 0;
   padding-bottom: 4em;
-  /* colorcolumn=120 */
-  background:
-    linear-gradient(var(--mantle), var(--mantle))
-    no-repeat calc(var(--gutter) + 119ch) 0 / 1ch 100%;
 }
 
 .buf {
