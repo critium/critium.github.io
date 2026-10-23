@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="critium: forj, Scala-style comprehensions for Java, and Magnetite, a readable domain language that compiles to Rust." />
+    <meta name="description" content="critium: forj, forj-codec, forj-http and Magnetite. Links to each project's README and API docs." />
     <title>critium</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,8 +13,10 @@
   <body>
     <nav class="tabline">
       <a class="tab" href="#dashboard" data-buf="dashboard"><span class="tabnr">1</span> dashboard</a>
-      <a class="tab" href="#forj" data-buf="forj"><span class="tabnr">2</span> forj.md</a>
-      <a class="tab" href="#magnetite" data-buf="magnetite"><span class="tabnr">3</span> magnetite.md</a>
+      <a class="tab" href="/forj/">forj</a>
+      <a class="tab" href="/forj-codec/">forj-codec</a>
+      <a class="tab" href="/forj-http/">forj-http</a>
+      <a class="tab" href="https://github.com/critium/magnetite">magnetite</a>
       <span class="tabfill"></span>
       <a class="tab tab-right" href="https://github.com/critium">github</a>
     </nav>
@@ -23,22 +25,31 @@
       <aside class="tree" aria-label="Files">
         <div class="tree-title">critium</div>
         <ul>
-          <li><a class="dir" href="#forj"><span class="fold">▾</span> forj</a>
+          <li><a class="dir" href="/forj/"><span class="fold">▾</span> forj</a>
             <ul>
-              <li><a class="dir" href="https://github.com/critium/forj/tree/main/core"><span class="fold">▸</span> core</a></li>
-              <li><a class="dir" href="https://github.com/critium/forj/tree/main/docs"><span class="fold">▸</span> docs</a></li>
-              <li><a class="dir" href="https://github.com/critium/forj/tree/main/examples"><span class="fold">▸</span> examples</a></li>
-              <li><a class="dir" href="https://github.com/critium/forj/tree/main/plugin"><span class="fold">▸</span> plugin</a></li>
-              <li><a class="file" href="https://github.com/critium/forj/blob/main/build.mill">build.mill</a></li>
-              <li><a class="file md" href="https://github.com/critium/forj#readme">README.md</a></li>
+              <li><a class="dir" href="/forj/api/"><span class="fold">▸</span> api</a></li>
+              <li><a class="dir" href="/forj/docs/"><span class="fold">▸</span> docs</a></li>
+              <li><a class="dir" href="/forj/examples/"><span class="fold">▸</span> examples</a></li>
+              <li><a class="file md" href="/forj/">README.md</a></li>
             </ul>
           </li>
-          <li><a class="dir" href="#magnetite"><span class="fold">▾</span> magnetite</a>
+          <li><a class="dir" href="/forj-codec/"><span class="fold">▾</span> forj-codec</a>
             <ul>
-              <li><a class="dir" href="https://github.com/critium/magnetite/tree/main/crates"><span class="fold">▸</span> crates</a></li>
-              <li><a class="dir" href="https://github.com/critium/magnetite/tree/main/examples/shop"><span class="fold">▸</span> examples</a></li>
-              <li><a class="file" href="https://github.com/critium/magnetite/blob/main/Cargo.toml">Cargo.toml</a></li>
-              <li><a class="file md" href="https://github.com/critium/magnetite/blob/main/PLAN.md">PLAN.md</a></li>
+              <li><a class="dir" href="/forj-codec/api/"><span class="fold">▸</span> api</a></li>
+              <li><a class="dir" href="/forj-codec/jackson/"><span class="fold">▸</span> jackson</a></li>
+              <li><a class="dir" href="/forj-codec/tck/"><span class="fold">▸</span> tck</a></li>
+              <li><a class="file md" href="/forj-codec/">README.md</a></li>
+            </ul>
+          </li>
+          <li><a class="dir" href="/forj-http/"><span class="fold">▾</span> forj-http</a>
+            <ul>
+              <li><a class="dir" href="/forj-http/api/"><span class="fold">▸</span> api</a></li>
+              <li><a class="file md" href="/forj-http/">README.md</a></li>
+            </ul>
+          </li>
+          <li><a class="dir" href="https://github.com/critium/magnetite"><span class="fold">▾</span> magnetite</a>
+            <ul>
+              <li><a class="file md" href="https://github.com/critium/magnetite#readme">README.md</a></li>
             </ul>
           </li>
         </ul>
@@ -55,115 +66,32 @@
           <p class="tagline">language experiments on the JVM and in Rust</p>
 
           <div class="group">
-            <div class="group-title">Projects</div>
-            <a class="button" href="#forj"><span class="key">[f]</span> <span class="label">forj</span><span class="desc">Scala-style for comprehensions for Java</span></a>
-            <a class="button" href="#magnetite"><span class="key">[m]</span> <span class="label">magnetite</span><span class="desc">readable domain logic that compiles to Rust</span></a>
+            <div class="group-title">forj <span class="group-desc">Scala-style for comprehensions for Java, as a javac plugin</span></div>
+            <a class="button" href="/forj/" data-key="1"><span class="key">[1]</span> <span class="label">README.md</span><span class="desc">critium.github.io/forj</span></a>
+            <a class="button" href="/forj/docs/"><span class="key">   </span> <span class="label">docs/</span><span class="desc">guides for Java and Scala developers</span></a>
+            <a class="button" href="/forj/api/"><span class="key">   </span> <span class="label">api/</span><span class="desc">javadoc</span></a>
+            <a class="button" href="/forj/examples/"><span class="key">   </span> <span class="label">examples/</span><span class="desc">javadoc for the examples</span></a>
+            <a class="button" href="https://github.com/critium/forj"><span class="key">   </span> <span class="label">github</span><span class="desc">github.com/critium/forj</span></a>
           </div>
           <div class="group">
-            <div class="group-title">Links</div>
-            <a class="button" href="https://github.com/critium/forj"><span class="key">[1]</span> <span class="label">~/forj</span><span class="desc">github.com/critium/forj</span></a>
-            <a class="button" href="https://github.com/critium/magnetite"><span class="key">[2]</span> <span class="label">~/magnetite</span><span class="desc">github.com/critium/magnetite</span></a>
-            <a class="button" href="https://github.com/critium"><span class="key">[g]</span> <span class="label">~/</span><span class="desc">github.com/critium</span></a>
+            <div class="group-title">forj-codec <span class="group-desc">JSON codecs for forj, derived at compile time</span></div>
+            <a class="button" href="/forj-codec/" data-key="2"><span class="key">[2]</span> <span class="label">README.md</span><span class="desc">critium.github.io/forj-codec</span></a>
+            <a class="button" href="/forj-codec/api/"><span class="key">   </span> <span class="label">api/</span><span class="desc">javadoc</span></a>
+            <a class="button" href="/forj-codec/jackson/"><span class="key">   </span> <span class="label">jackson/</span><span class="desc">javadoc for the Jackson adapter</span></a>
+            <a class="button" href="/forj-codec/tck/"><span class="key">   </span> <span class="label">tck/</span><span class="desc">javadoc for the backend TCK</span></a>
+            <a class="button" href="https://github.com/critium/forj-codec"><span class="key">   </span> <span class="label">github</span><span class="desc">github.com/critium/forj-codec</span></a>
           </div>
-          <p class="hint">hjkl move · enter open · f/m jump · gg/G · : commands</p>
-        </section>
-
-        <!-- forj.md -->
-        <section class="buf doc" id="forj" data-name="forj.md" data-ft="markdown">
-          <h1 class="ln h1"><span class="hm"># </span>forj</h1>
-          <div class="ln"></div>
-          <p class="ln">Scala-style <code>for</code> comprehensions for Java, as a javac plugin. Your files stay <code>.java</code>. Comprehensions run on real type classes, and Scala 3's <code>given</code>/<code>using</code> is resolved at compile time.</p>
-          <div class="ln"></div>
-          <div class="code">
-            <div class="ln lang">java</div>
-<div class="ln"><span class="t">Optional</span><span class="p">&lt;</span><span class="t">String</span><span class="p">&gt;</span> city <span class="o">=</span> <span class="k">forj</span> <span class="p">{</span></div>
-<div class="ln">    user    <span class="o">&lt;-</span> <span class="f">findUser</span><span class="p">(</span>name<span class="p">);</span></div>
-<div class="ln">    manager <span class="o">&lt;-</span> user<span class="p">.</span><span class="f">managerName</span><span class="p">();</span></div>
-<div class="ln">    address <span class="o">&lt;-</span> <span class="f">findAddress</span><span class="p">(</span>manager<span class="p">);</span></div>
-<div class="ln"><span class="p">}</span> <span class="k">yield</span> address<span class="p">.</span><span class="f">city</span><span class="p">();</span></div>
-<div class="ln"></div>
-<div class="ln"><span class="c">// three calls in parallel, then one that needs their answer</span></div>
-<div class="ln"><span class="t">Callable</span><span class="p">&lt;</span><span class="t">String</span><span class="p">&gt;</span> dashboard <span class="o">=</span> <span class="k">forj</span> <span class="p">{</span></div>
-<div class="ln">    parts    <span class="o">&lt;-</span> <span class="t">Par</span><span class="p">.</span><span class="f">mapN</span><span class="p">(</span>profile<span class="p">,</span> orders<span class="p">,</span> recs<span class="p">,</span> <span class="t">Parts</span><span class="o">::</span><span class="k">new</span><span class="p">);</span></div>
-<div class="ln">    shipping <span class="o">&lt;-</span> <span class="f">get</span><span class="p">(</span><span class="s">"/shipping/"</span> <span class="o">+</span> <span class="f">count</span><span class="p">(</span>parts<span class="p">));</span></div>
-<div class="ln"><span class="p">}</span> <span class="k">yield</span> <span class="f">render</span><span class="p">(</span>parts<span class="p">,</span> shipping<span class="p">);</span></div>
-            <div class="ln fence"></div>
+          <div class="group">
+            <div class="group-title">forj-http <span class="group-desc">an http4s-style server framework for forj</span></div>
+            <a class="button" href="/forj-http/" data-key="3"><span class="key">[3]</span> <span class="label">README.md</span><span class="desc">critium.github.io/forj-http</span></a>
+            <a class="button" href="/forj-http/api/"><span class="key">   </span> <span class="label">api/</span><span class="desc">javadoc</span></a>
+            <a class="button" href="https://github.com/critium/forj-http"><span class="key">   </span> <span class="label">github</span><span class="desc">github.com/critium/forj-http</span></a>
           </div>
-          <div class="ln"></div>
-          <h2 class="ln h2"><span class="hm">## </span>Features</h2>
-          <div class="ln"></div>
-          <ul>
-            <li class="ln"><span class="dot">● </span><code>forj { … } yield</code> over <code>Optional</code>, <code>List</code>, <code>Callable</code>, <code>IO</code> or any <code>F</code></li>
-            <li class="ln"><span class="dot">● </span>Higher-kinded <code>F&lt;_&gt;</code> and the cats-effect 2 ladder, from <code>Functor</code> to <code>Concurrent</code></li>
-            <li class="ln"><span class="dot">● </span>A lazy, stack-safe <code>IO</code> on virtual threads with structured concurrency</li>
-            <li class="ln"><span class="dot">● </span><code>s""</code>, <code>f""</code> and <code>raw""</code> string interpolation</li>
-            <li class="ln"><span class="dot">● </span>Errors and stack traces point at the code you wrote</li>
-          </ul>
-          <div class="ln"></div>
-          <h2 class="ln h2"><span class="hm">## </span>Links</h2>
-          <div class="ln"></div>
-          <ul>
-            <li class="ln"><span class="dot">● </span><a href="https://github.com/critium/forj">github.com/critium/forj</a></li>
-            <li class="ln"><span class="dot">● </span><a href="https://github.com/critium/forj/blob/main/docs/java-developers.md">New to comprehensions? For Java developers</a></li>
-            <li class="ln"><span class="dot">● </span><a href="https://github.com/critium/forj/blob/main/docs/scala-developers.md">Coming from Scala? For Scala developers</a></li>
-            <li class="ln"><span class="dot">● </span><a href="/forj/api/">API docs (javadoc)</a></li>
-          </ul>
-          <div class="ln"></div>
-        </section>
-
-        <!-- magnetite.md -->
-        <section class="buf doc" id="magnetite" data-name="magnetite.md" data-ft="markdown">
-          <h1 class="ln h1"><span class="hm"># </span>Magnetite</h1>
-          <div class="ln"></div>
-          <p class="ln">A readable domain language that compiles to a plain, idiomatic Rust crate. Source files are Markdown: tables declare records, state machines and routes, and fenced <code>mgt</code> blocks hold logic that reads close to English.</p>
-          <div class="ln"></div>
-          <h2 class="ln h2"><span class="hm">## </span>Order status</h2>
-          <div class="ln"></div>
-          <div class="table">
-<div class="ln"><span class="b">┌───────────┬────────────────────────┐</span></div>
-<div class="ln"><span class="b">│</span> <strong>From</strong>      <span class="b">│</span> <strong>To</strong>                     <span class="b">│</span></div>
-<div class="ln"><span class="b">├───────────┼────────────────────────┤</span></div>
-<div class="ln"><span class="b">│</span> <code>Placed</code>    <span class="b">│</span> <code>Paid</code>, <code>Cancelled</code>        <span class="b">│</span></div>
-<div class="ln"><span class="b">│</span> <code>Paid</code>      <span class="b">│</span> <code>Shipped</code>, <code>Cancelled</code>     <span class="b">│</span></div>
-<div class="ln"><span class="b">│</span> <code>Shipped</code>   <span class="b">│</span> <code>Delivered</code>              <span class="b">│</span></div>
-<div class="ln"><span class="b">└───────────┴────────────────────────┘</span></div>
+          <div class="group">
+            <div class="group-title">magnetite <span class="group-desc">readable domain logic that compiles to Rust</span></div>
+            <a class="button" href="https://github.com/critium/magnetite" data-key="4"><span class="key">[4]</span> <span class="label">github</span><span class="desc">github.com/critium/magnetite</span></a>
           </div>
-          <div class="ln"></div>
-          <blockquote class="ln callout">An action that moves a <code>Shipped</code> order to <code>Cancelled</code> is a compile error, not a runtime surprise.</blockquote>
-          <div class="ln"></div>
-          <div class="code">
-            <div class="ln lang">mgt</div>
-<div class="ln"><span class="k">together</span></div>
-<div class="ln">  <span class="k">let</span> customer <span class="o">=</span> <span class="t">CustomerDirectory</span><span class="p">.</span><span class="f">load</span><span class="p">(</span>id<span class="p">)</span></div>
-<div class="ln">  <span class="k">let</span> orders   <span class="o">=</span> <span class="t">OrderStore</span><span class="p">.</span><span class="f">recent_for</span><span class="p">(</span>id<span class="p">,</span> <span class="n">20</span><span class="p">)</span></div>
-<div class="ln"></div>
-<div class="ln"><span class="c">-- one tracking call per shipped order, at most 5 in flight</span></div>
-<div class="ln"><span class="k">let</span> shipments <span class="o">=</span> <span class="f">track</span><span class="p">(</span>o<span class="p">.</span>carrier<span class="p">,</span> o<span class="p">.</span>shipment<span class="p">)</span></div>
-<div class="ln">  <span class="k">for each</span> o <span class="k">in</span> orders <span class="k">where</span> o<span class="p">.</span>status <span class="k">is</span> <span class="t">Shipped</span><span class="p">,</span></div>
-<div class="ln">  <span class="k">together</span><span class="p">,</span> <span class="k">at most</span> <span class="n">5</span> <span class="k">at a time</span></div>
-            <div class="ln fence"></div>
-          </div>
-          <div class="ln"></div>
-          <h2 class="ln h2"><span class="hm">## </span>Features</h2>
-          <div class="ln"></div>
-          <ul>
-            <li class="ln"><span class="dot">● </span>Refinement types, units and money, checked at compile time</li>
-            <li class="ln"><span class="dot">● </span>Exhaustive states: an illegal transition is a compile error</li>
-            <li class="ln"><span class="dot">● </span>Pure rules, with I/O only in declared workflows</li>
-            <li class="ln"><span class="dot">● </span>Value semantics, so nobody fights the borrow checker</li>
-            <li class="ln"><span class="dot">● </span>Generates axum routes and reqwest clients, with hand-written Rust where you need it</li>
-          </ul>
-          <div class="ln"></div>
-          <h2 class="ln h2"><span class="hm">## </span>Links</h2>
-          <div class="ln"></div>
-          <ul>
-            <li class="ln"><span class="dot">● </span><a href="https://github.com/critium/magnetite">github.com/critium/magnetite</a></li>
-            <li class="ln"><span class="dot">● </span><a href="https://github.com/critium/magnetite/tree/main/examples/shop">Example: a shop, in literate Markdown</a></li>
-          </ul>
-          <div class="ln"></div>
-          <div class="eob">~</div>
-          <div class="eob">~</div>
-          <div class="eob">~</div>
+          <p class="hint">hjkl move · enter open · 1-4 open a project · :api forj · : commands</p>
         </section>
       </main>
     </div>
@@ -179,7 +107,7 @@
         <span class="sl-z" id="loc">1:1</span>
       </div>
       <form class="cmdline" id="cmdform" autocomplete="off">
-        <span id="msg">"critium.github.io" 3 buffers</span>
+        <span id="msg">"critium.github.io" 4 projects</span>
         <span class="cmd" id="cmdwrap" hidden>:<input id="cmd" aria-label="command" spellcheck="false" /></span>
         <span class="showcmd" id="showcmd"></span>
       </form>

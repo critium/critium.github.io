@@ -123,141 +123,7 @@ a { color: inherit; }
   max-width: calc(var(--gutter) + 104ch);
 }
 
-.ln {
-  position: relative;
-  margin: 0;
-  min-height: 1.6em;
-  counter-increment: ln;
-}
-
-/* number */
-.ln::before {
-  content: counter(ln);
-  position: absolute;
-  left: calc(-1 * var(--gutter));
-  width: calc(var(--gutter) - 2ch);
-  text-align: right;
-  color: var(--surface1);
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* listchars eol:· */
-.ln::after {
-  content: "·";
-  color: var(--surface1);
-  font-weight: 400;
-}
-
-.doc {
-  border-top: 1px solid var(--surface0);
-  padding-top: 0;
-}
-
-/* render-markdown */
-
-.h1, .h2 {
-  font-size: inherit;
-  line-height: inherit;
-  font-weight: 700;
-}
-
-.h1 {
-  color: var(--red);
-  background: color-mix(in srgb, var(--red) 18%, var(--base));
-}
-
-.h2 {
-  color: var(--peach);
-  background: color-mix(in srgb, var(--peach) 14%, var(--base));
-}
-
-.hm { opacity: 0.55; }
-
-.doc p { color: var(--text); }
-
-code {
-  font: inherit;
-  background: var(--surface0);
-  color: var(--text);
-  padding: 0 0.5ch;
-  border-radius: 3px;
-}
-
-.doc ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.doc li { padding-left: 2ch; }
-
-.doc li .dot {
-  display: inline-block;
-  width: 2ch;
-  margin-left: -2ch;
-  color: var(--sky);
-}
-
-.doc a {
-  color: var(--blue);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.doc a:hover { color: var(--sapphire); }
-
-.callout {
-  color: var(--subtext0);
-  border-left: 2px solid var(--sapphire);
-  padding-left: 1.5ch;
-  font-style: italic;
-}
-
-/* code blocks */
-
-.code {
-  background: var(--mantle);
-  padding: 0 1ch;
-}
-
-.code .ln {
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-}
-
-.code .lang {
-  color: var(--overlay1);
-  font-style: italic;
-}
-
-.code .lang::after,
-.code .fence::after { content: none; }
-
-.table .ln { white-space: pre; }
-.table code { padding: 0; }
-
 [hidden] { display: none !important; }
-
-.table .b { color: var(--surface2); }
-.table strong { color: var(--text); }
-
-/* syntax */
-.k { color: var(--mauve); }
-.t { color: var(--yellow); }
-.f { color: var(--blue); }
-.s { color: var(--green); }
-.n { color: var(--peach); }
-.o { color: var(--sky); }
-.p { color: var(--overlay2); }
-.c { color: var(--overlay2); font-style: italic; }
-
-.eob {
-  color: var(--surface1);
-  margin-left: calc(-1 * var(--gutter));
-  padding-left: 1ch;
-  line-height: 1.6;
-}
 
 /* alpha / startify dashboard */
 
@@ -301,7 +167,7 @@ code {
   outline: none;
 }
 
-.button .key { color: var(--green); }
+.button .key { color: var(--green); min-width: 3ch; }
 
 .button .label {
   color: var(--lavender);
@@ -309,6 +175,8 @@ code {
 }
 
 .button .desc { color: var(--overlay1); }
+
+.group-desc { color: var(--overlay1); margin-left: 1ch; }
 
 .hint {
   margin: 2.4em 0 0;
@@ -338,8 +206,6 @@ a.cursor * { color: var(--crust) !important; }
 .button.cursor .label { color: var(--lavender) !important; }
 .button.cursor .desc { color: var(--subtext0) !important; }
 
-.ln:has(a.cursor) { background: var(--surface0); }
-.ln:has(a.cursor)::before { color: var(--lavender); font-weight: 700; }
 
 /* statusline + cmdline */
 
@@ -437,8 +303,7 @@ body.cmd-mode .sl-b, body.cmd-mode .sl-y { color: var(--peach); }
   .buf { padding-right: 16px; }
   .dashboard { padding-top: 2em; }
   .header { font-size: min(13px, 2.9vw); }
-  .table { font-size: 11.5px; }
   .sl-b, .sl-x { display: none; }
-  .button .desc { flex-basis: 100%; padding-left: 4ch; }
+  .button .desc { flex-basis: 100%; padding-left: 5ch; }
   .hint { display: none; }
 }

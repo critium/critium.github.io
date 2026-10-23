@@ -133,7 +133,17 @@
     if (cursor) cursor.focus({ preventScroll: true });
   }
 
-  const names = { dashboard: "dashboard", forj: "forj", magnetite: "magnetite", mgt: "magnetite" };
+  // each project's Pages site: /<repo>/ is its README, /<repo>/api/ its javadoc
+  const projects = {
+    forj: "/forj/",
+    "forj-codec": "/forj-codec/",
+    codec: "/forj-codec/",
+    "forj-http": "/forj-http/",
+    http: "/forj-http/",
+    magnetite: "https://github.com/critium/magnetite",
+    mgt: "https://github.com/critium/magnetite",
+  };
+  const hasApi = (url) => url.startsWith("/");
 
   function run(line) {
     const [name, ...rest] = line.trim().split(/\s+/);
@@ -146,11 +156,16 @@
     }
     switch (name) {
       case "e": case "edit": case "b": case "buffer": case "tabn":
-        if (names[arg]) openBuffer(names[arg]);
+        if (arg === "dashboard" || !arg) openBuffer("dashboard");
+        else if (projects[arg]) location.href = projects[arg];
         else echo(`E94: No matching buffer for ${arg}`, true);
         return;
-      case "forj": case "magnetite": case "dashboard": case "Alpha":
-        openBuffer(names[name] || "dashboard");
+      case "api": case "javadoc":
+        if (projects[arg] && hasApi(projects[arg])) location.href = projects[arg] + "api/";
+        else echo(`E149: Sorry, no api docs for ${arg || "?"}`, true);
+        return;
+      case "dashboard": case "Alpha":
+        openBuffer("dashboard");
         return;
       case "Neotree": case "NvimTreeToggle":
         if (visible(tree)) place(nearest(links(tree)));
@@ -168,7 +183,7 @@
         echo("catppuccin");
         return;
       case "h": case "help":
-        echo("hjkl move · <CR> open · gt/gT buffers · gg/G · f/m jump · :e forj · :q");
+        echo("hjkl move · <CR> open · 1-4 projects · gg/G · :e forj-http · :api forj-codec · :q");
         return;
     }
     echo(`E492: Not an editor command: ${line.trim()}`, true);
@@ -190,12 +205,8 @@
 
   // normal mode
 
-  const order = buffers.map((b) => b.id);
-
-  function cycle(delta) {
-    const i = order.indexOf(currentBuffer().id);
-    openBuffer(order[(i + delta + order.length) % order.length]);
-  }
+  // startify keys: [1] opens the button marked data-key="1"
+  const keyed = new Map($$("[data-key]").map((a) => [a.dataset.key, a]));
 
   document.addEventListener("keydown", (e) => {
     if (e.target === cmd || e.metaKey || e.altKey) return;
@@ -228,17 +239,15 @@
         break;
       case "gg": place(links(pane)[0]); scrollTo(0, 0); break;
       case "G": place(links(pane).at(-1)); scrollTo(0, document.documentElement.scrollHeight); break;
-      case "gt": cycle(1); break;
-      case "gT": cycle(-1); break;
-      case "f": openBuffer("forj"); break;
-      case "m": openBuffer("magnetite"); break;
       case ":": case ";": e.preventDefault(); openCmd(); return;
       case "Escape": echo(""); break;
       case "g":
         pending = "g";
         showcmd.textContent = "g";
         return;
-      default: return;
+      default:
+        if (!keyed.has(seq)) return;
+        follow(keyed.get(seq));
     }
     e.preventDefault();
   });
