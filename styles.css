@@ -307,3 +307,41 @@ body.cmd-mode .sl-b, body.cmd-mode .sl-y { color: var(--peach); }
   .button .desc { flex-basis: 100%; padding-left: 5ch; }
   .hint { display: none; }
 }
+
+/* forj teaser and its sub-projects */
+
+.teaser {
+  margin: 0.2em 0 0.8em;
+  color: var(--subtext0);
+  max-width: 80ch;
+}
+
+code {
+  font: inherit;
+  background: var(--surface0);
+  color: var(--text);
+  padding: 0 0.5ch;
+  border-radius: 3px;
+}
+
+.snippet {
+  font: inherit;
+  margin: 0 0 1em;
+  padding: 0.6em 2ch;
+  background: var(--mantle);
+  border-left: 2px solid var(--surface1);
+  overflow-x: auto;
+  max-width: 80ch;
+}
+
+.k { color: var(--mauve); }
+.t { color: var(--yellow); }
+.f { color: var(--blue); }
+.o { color: var(--sky); }
+.p { color: var(--overlay2); }
+.n { color: var(--peach); }
+
+.sub { margin: 0 0 0.8em; }
+.sub-title { color: var(--lavender); }
+.sub-title .branch { color: var(--surface2); }
+.sub .button { margin-left: calc(3ch - 1ch); }

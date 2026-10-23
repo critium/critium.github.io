@@ -13,7 +13,7 @@
   <body>
     <nav class="tabline">
       <a class="tab" href="#dashboard" data-buf="dashboard"><span class="tabnr">1</span> dashboard</a>
-      <a class="tab" href="/forj/">forj</a>
+      <a class="tab" href="/forj/">forj-core</a>
       <a class="tab" href="/forj-codec/">forj-codec</a>
       <a class="tab" href="/forj-http/">forj-http</a>
       <a class="tab" href="https://github.com/critium/magnetite">magnetite</a>
@@ -27,24 +27,28 @@
         <ul>
           <li><a class="dir" href="/forj/"><span class="fold">▾</span> forj</a>
             <ul>
-              <li><a class="dir" href="/forj/api/"><span class="fold">▸</span> api</a></li>
-              <li><a class="dir" href="/forj/docs/"><span class="fold">▸</span> docs</a></li>
-              <li><a class="dir" href="/forj/examples/"><span class="fold">▸</span> examples</a></li>
-              <li><a class="file md" href="/forj/">README.md</a></li>
-            </ul>
-          </li>
-          <li><a class="dir" href="/forj-codec/"><span class="fold">▾</span> forj-codec</a>
-            <ul>
-              <li><a class="dir" href="/forj-codec/api/"><span class="fold">▸</span> api</a></li>
-              <li><a class="dir" href="/forj-codec/jackson/"><span class="fold">▸</span> jackson</a></li>
-              <li><a class="dir" href="/forj-codec/tck/"><span class="fold">▸</span> tck</a></li>
-              <li><a class="file md" href="/forj-codec/">README.md</a></li>
-            </ul>
-          </li>
-          <li><a class="dir" href="/forj-http/"><span class="fold">▾</span> forj-http</a>
-            <ul>
-              <li><a class="dir" href="/forj-http/api/"><span class="fold">▸</span> api</a></li>
-              <li><a class="file md" href="/forj-http/">README.md</a></li>
+              <li><a class="dir" href="/forj/"><span class="fold">▾</span> forj-core</a>
+                <ul>
+                  <li><a class="dir" href="/forj/api/"><span class="fold">▸</span> api</a></li>
+                  <li><a class="dir" href="/forj/docs/"><span class="fold">▸</span> docs</a></li>
+                  <li><a class="dir" href="/forj/examples/"><span class="fold">▸</span> examples</a></li>
+                  <li><a class="file md" href="/forj/">README.md</a></li>
+                </ul>
+              </li>
+              <li><a class="dir" href="/forj-codec/"><span class="fold">▾</span> forj-codec</a>
+                <ul>
+                  <li><a class="dir" href="/forj-codec/api/"><span class="fold">▸</span> api</a></li>
+                  <li><a class="dir" href="/forj-codec/jackson/"><span class="fold">▸</span> jackson</a></li>
+                  <li><a class="dir" href="/forj-codec/tck/"><span class="fold">▸</span> tck</a></li>
+                  <li><a class="file md" href="/forj-codec/">README.md</a></li>
+                </ul>
+              </li>
+              <li><a class="dir" href="/forj-http/"><span class="fold">▾</span> forj-http</a>
+                <ul>
+                  <li><a class="dir" href="/forj-http/api/"><span class="fold">▸</span> api</a></li>
+                  <li><a class="file md" href="/forj-http/">README.md</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
           <li><a class="dir" href="https://github.com/critium/magnetite"><span class="fold">▾</span> magnetite</a>
@@ -65,30 +69,43 @@
  ██████ ██   ██ ██    ██    ██  ██████  ██      ██</pre>
           <p class="tagline">language experiments on the JVM and in Rust</p>
 
-          <div class="group">
+          <div class="group project">
             <div class="group-title">forj <span class="group-desc">Scala-style for comprehensions for Java, as a javac plugin</span></div>
-            <a class="button" href="/forj/" data-key="1"><span class="key">[1]</span> <span class="label">README.md</span><span class="desc">critium.github.io/forj</span></a>
-            <a class="button" href="/forj/docs/"><span class="key">   </span> <span class="label">docs/</span><span class="desc">guides for Java and Scala developers</span></a>
-            <a class="button" href="/forj/api/"><span class="key">   </span> <span class="label">api/</span><span class="desc">javadoc</span></a>
-            <a class="button" href="/forj/examples/"><span class="key">   </span> <span class="label">examples/</span><span class="desc">javadoc for the examples</span></a>
-            <a class="button" href="https://github.com/critium/forj"><span class="key">   </span> <span class="label">github</span><span class="desc">github.com/critium/forj</span></a>
-          </div>
-          <div class="group">
-            <div class="group-title">forj-codec <span class="group-desc">JSON codecs for forj, derived at compile time</span></div>
-            <a class="button" href="/forj-codec/" data-key="2"><span class="key">[2]</span> <span class="label">README.md</span><span class="desc">critium.github.io/forj-codec</span></a>
-            <a class="button" href="/forj-codec/api/"><span class="key">   </span> <span class="label">api/</span><span class="desc">javadoc</span></a>
-            <a class="button" href="/forj-codec/jackson/"><span class="key">   </span> <span class="label">jackson/</span><span class="desc">javadoc for the Jackson adapter</span></a>
-            <a class="button" href="/forj-codec/tck/"><span class="key">   </span> <span class="label">tck/</span><span class="desc">javadoc for the backend TCK</span></a>
-            <a class="button" href="https://github.com/critium/forj-codec"><span class="key">   </span> <span class="label">github</span><span class="desc">github.com/critium/forj-codec</span></a>
-          </div>
-          <div class="group">
-            <div class="group-title">forj-http <span class="group-desc">an http4s-style server framework for forj</span></div>
-            <a class="button" href="/forj-http/" data-key="3"><span class="key">[3]</span> <span class="label">README.md</span><span class="desc">critium.github.io/forj-http</span></a>
-            <a class="button" href="/forj-http/api/"><span class="key">   </span> <span class="label">api/</span><span class="desc">javadoc</span></a>
-            <a class="button" href="https://github.com/critium/forj-http"><span class="key">   </span> <span class="label">github</span><span class="desc">github.com/critium/forj-http</span></a>
+            <p class="teaser">Your files stay <code>.java</code>. Comprehensions run on real type classes, and Scala 3's <code>given</code>/<code>using</code> resolves at compile time.</p>
+<pre class="snippet"><span class="t">Optional</span><span class="p">&lt;</span><span class="t">String</span><span class="p">&gt;</span> city <span class="o">=</span> <span class="k">forj</span> <span class="p">{</span>
+    user    <span class="o">&lt;-</span> <span class="f">findUser</span><span class="p">(</span>name<span class="p">);</span>
+    manager <span class="o">&lt;-</span> user<span class="p">.</span><span class="f">managerName</span><span class="p">();</span>
+    address <span class="o">&lt;-</span> <span class="f">findAddress</span><span class="p">(</span>manager<span class="p">);</span>
+<span class="p">}</span> <span class="k">yield</span> address<span class="p">.</span><span class="f">city</span><span class="p">();</span></pre>
+            <div class="sub">
+              <div class="sub-title"><span class="branch">├─</span> forj-core <span class="group-desc">the javac plugin and runtime</span></div>
+              <a class="button" href="/forj/" data-key="1"><span class="key">[1]</span> <span class="label">README.md</span><span class="desc">critium.github.io/forj</span></a>
+              <a class="button" href="/forj/docs/"><span class="key">   </span> <span class="label">docs/</span><span class="desc">guides for Java and Scala developers</span></a>
+              <a class="button" href="/forj/api/"><span class="key">   </span> <span class="label">api/</span><span class="desc">javadoc</span></a>
+              <a class="button" href="/forj/examples/"><span class="key">   </span> <span class="label">examples/</span><span class="desc">javadoc for the examples</span></a>
+              <a class="button" href="https://github.com/critium/forj"><span class="key">   </span> <span class="label">github</span><span class="desc">github.com/critium/forj</span></a>
+            </div>
+            <div class="sub">
+              <div class="sub-title"><span class="branch">├─</span> forj-codec <span class="group-desc">JSON codecs, derived at compile time</span></div>
+              <a class="button" href="/forj-codec/" data-key="2"><span class="key">[2]</span> <span class="label">README.md</span><span class="desc">critium.github.io/forj-codec</span></a>
+              <a class="button" href="/forj-codec/api/"><span class="key">   </span> <span class="label">api/</span><span class="desc">javadoc</span></a>
+              <a class="button" href="/forj-codec/jackson/"><span class="key">   </span> <span class="label">jackson/</span><span class="desc">javadoc for the Jackson adapter</span></a>
+              <a class="button" href="/forj-codec/tck/"><span class="key">   </span> <span class="label">tck/</span><span class="desc">javadoc for the backend TCK</span></a>
+              <a class="button" href="https://github.com/critium/forj-codec"><span class="key">   </span> <span class="label">github</span><span class="desc">github.com/critium/forj-codec</span></a>
+            </div>
+            <div class="sub last">
+              <div class="sub-title"><span class="branch">└─</span> forj-http <span class="group-desc">an http4s-style server framework</span></div>
+              <a class="button" href="/forj-http/" data-key="3"><span class="key">[3]</span> <span class="label">README.md</span><span class="desc">critium.github.io/forj-http</span></a>
+              <a class="button" href="/forj-http/api/"><span class="key">   </span> <span class="label">api/</span><span class="desc">javadoc</span></a>
+              <a class="button" href="https://github.com/critium/forj-http"><span class="key">   </span> <span class="label">github</span><span class="desc">github.com/critium/forj-http</span></a>
+            </div>
           </div>
           <div class="group">
             <div class="group-title">magnetite <span class="group-desc">readable domain logic that compiles to Rust</span></div>
+            <p class="teaser">Source files are Markdown: tables declare records, state machines and routes, and an illegal state transition is a compile error.</p>
+<pre class="snippet"><span class="k">together</span>
+  <span class="k">let</span> customer <span class="o">=</span> <span class="t">CustomerDirectory</span><span class="p">.</span><span class="f">load</span><span class="p">(</span>id<span class="p">)</span>
+  <span class="k">let</span> orders   <span class="o">=</span> <span class="t">OrderStore</span><span class="p">.</span><span class="f">recent_for</span><span class="p">(</span>id<span class="p">,</span> <span class="n">20</span><span class="p">)</span></pre>
             <a class="button" href="https://github.com/critium/magnetite" data-key="4"><span class="key">[4]</span> <span class="label">github</span><span class="desc">github.com/critium/magnetite</span></a>
           </div>
           <p class="hint">hjkl move · enter open · 1-4 open a project · :api forj · : commands</p>

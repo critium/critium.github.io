@@ -136,6 +136,8 @@
   // each project's Pages site: /<repo>/ is its README, /<repo>/api/ its javadoc
   const projects = {
     forj: "/forj/",
+    "forj-core": "/forj/",
+    core: "/forj/",
     "forj-codec": "/forj-codec/",
     codec: "/forj-codec/",
     "forj-http": "/forj-http/",
