@@ -41,10 +41,10 @@ body {
 .tabline .fill { flex: 1; }
 .tabline a.right { color: var(--blue); }
 
-/* a reading column on the left, with the site's gutter, like a buffer in the editor */
 main {
-  max-width: calc(104ch + 8ch);
-  padding: 1.4em 4ch 4em;
+  max-width: 116ch;
+  padding: 1.4em 3ch 4em;
+  margin: 0 auto;
 }
 
 h1, h2, h3, h4 { font-size: inherit; line-height: inherit; font-weight: 700; margin: 1.6em 0 0.8em; }
