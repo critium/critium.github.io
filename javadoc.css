@@ -1,0 +1,224 @@
+/*
+ * The API docs of the critium repos (javadoc), in the site's style: Catppuccin Mocha,
+ * JetBrains Mono, an editor's look. Added on top of javadoc's own stylesheet
+ * (--add-stylesheet), so it mostly sets the variables that stylesheet reads. The site is dark
+ * only, so both of javadoc's themes are Mocha.
+ *
+ * Docs hosted on Pages (critium.github.io/<repo>/) load this file live, so a change here
+ * restyles them all. Javadoc jars get a copy at build time, palette.css inlined.
+ */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("palette.css");
+
+:root,
+:root[data-theme="theme-light"],
+:root[data-theme="theme-dark"] {
+    /* javadoc's variables */
+    --body-font-family: var(--mono);
+    --block-font-family: var(--mono);
+    --code-font-family: var(--mono);
+    --body-font-size: 14px;
+    --block-font-size: 14px;
+    --code-font-size: 14px;
+    --nav-font-size: 13px;
+    --block-line-height: 1.6;
+    --code-line-height: 1.6;
+
+    --body-text-color: var(--text);
+    --block-text-color: var(--subtext1);
+    --body-background-color: var(--base);
+    --section-background-color: var(--base);
+    --detail-background-color: var(--base);
+    --code-background-color: var(--surface0);
+    --mark-background-color: var(--surface0);
+    --detail-block-color: var(--mantle);
+    --navbar-background-color: var(--mantle);
+    --navbar-text-color: var(--text);
+    --subnav-background-color: var(--crust);
+    --subnav-link-color: var(--blue);
+    --member-heading-background-color: var(--surface0);
+    --selected-background-color: var(--surface1);
+    --selected-text-color: var(--green);
+    --selected-link-color: var(--green);
+    --table-header-color: var(--mantle);
+    --even-row-color: var(--base);
+    --odd-row-color: var(--mantle);
+    --title-color: var(--red);
+    --link-color: var(--blue);
+    --link-color-active: var(--sapphire);
+    --toc-background-color: var(--mantle);
+    --toc-highlight-color: var(--surface0);
+    --toc-hover-color: var(--surface0);
+    --snippet-background-color: var(--mantle);
+    --snippet-text-color: var(--text);
+    --snippet-highlight-color: var(--surface2);
+    --pre-background-color: var(--mantle);
+    --pre-text-color: var(--text);
+    --border-color: var(--surface0);
+    --table-border-color: var(--surface1);
+    --tab-border-radius: 0;
+    --search-input-background-color: var(--mantle);
+    --search-input-text-color: var(--text);
+    --search-border-light-color: var(--surface1);
+    --search-border-dark-color: var(--crust);
+    --search-input-placeholder-color: var(--overlay0);
+    --overlay-background: rgba(17, 17, 27, 0.6);
+    --search-tag-background-color: var(--yellow);
+    --search-tag-text-color: var(--crust);
+    --search-hover-background: var(--surface0);
+    --button-border-color: var(--surface1);
+    --invalid-tag-background-color: color-mix(in srgb, var(--red) 25%, var(--base));
+    --invalid-tag-text-color: var(--text);
+    --caption-link-color: var(--blue);
+
+    /* the dark theme's icons, for both themes */
+    --icon-filter: invert(100%) brightness(160%);
+    --right-svg: url('data:image/svg+xml; utf8, \
+    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"> \
+    <path d="m35.763 5.058 38.675 36.885a12.596 12.596 90 0 1 0 18.23L35.763 97.058v-18.32l27.055-25.431a2.975 2.975 90.09 0 0 .007-4.33L35.763 23.38Z" \
+    style="fill:%23cdd6f4;stroke-width:.285806" transform="translate(-5.292 -1.058)"/> \
+    </svg>');
+    --glass-svg: url('data:image/svg+xml; utf8, \
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"> \
+    <path d="M66.37 55.005C64.415 58.958 60.147 63.321 56.153 66l32.478 33.456L99.377 88.99Z" style="fill:%2389b4fa"/>\
+    <circle cx="35.072" cy="35.072" r="30.635" style="fill:none;stroke:%2389b4fa;stroke-width:8"/></svg>');
+    --x-svg: url('data:image/svg+xml; utf8, \
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">\
+    <path d="m8 8 84 84" style="stroke:%23cdd6f4;stroke-width:15"/>\
+    <path d="M8 92 92 8" style="stroke:%23cdd6f4;stroke-width:15"/></svg>');
+    --current-theme-svg: url("moon.svg");
+}
+
+body {
+    font-variant-ligatures: none;
+}
+
+::selection {
+    background: var(--surface2);
+}
+
+/* the site's markdown headings: h1 red on a red tint, h2 peach on a peach tint */
+
+h1, h2, h3, h4 {
+    font-size: inherit;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.title, h1.title {
+    color: var(--red);
+    background: color-mix(in srgb, var(--red) 18%, var(--base));
+    padding: 0 1ch;
+}
+
+main h2 {
+    color: var(--peach);
+}
+
+.summary h2, .details h2, body.class-declaration-page .summary h2,
+body.class-declaration-page .details h2, body.class-use-page h2,
+body.module-declaration-page .block-list h2 {
+    font-style: normal;
+    color: var(--peach);
+    background: color-mix(in srgb, var(--peach) 14%, var(--base));
+    padding: 0 1ch;
+    border: 0;
+}
+
+main h3 {
+    color: var(--lavender);
+}
+
+/* inline code, as on the site */
+
+code {
+    background: transparent;
+    color: var(--text);
+}
+
+div.block code, .block code, dd code, td code {
+    background: var(--surface0);
+    padding: 0 0.5ch;
+    border-radius: 3px;
+}
+
+pre, pre.snippet {
+    border-left: 2px solid var(--surface1);
+}
+
+/* signatures read like highlighted code: the site's syntax colours */
+
+.member-signature, div.type-signature {
+    background: var(--mantle);
+    padding: 0.4em 1ch;
+}
+
+.modifiers, .member-signature .annotations { color: var(--mauve); }
+.return-type, .type-parameters, .type-parameters-long { color: var(--yellow); }
+.element-name, .type-name-label { color: var(--blue); font-weight: 700; }
+.parameters, .exceptions { color: var(--subtext1); }
+.member-signature a:link, .member-signature a:visited,
+.type-signature a:link, .type-signature a:visited { color: var(--yellow); }
+.extends-implements { color: var(--subtext0); }
+
+/* links: blue, underlined like the site's */
+
+main a[href]:link, main a[href]:visited {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+}
+
+.member-signature a[href], .summary-table a[href], .toc a[href], nav a[href] {
+    text-decoration: none !important;
+}
+
+/* top bar like the site's tabline: the current page is the active tab */
+
+.top-nav {
+    border-bottom: 1px solid var(--crust);
+}
+
+.top-nav .nav-list li.nav-bar-cell1-rev {
+    background: var(--surface1);
+    color: var(--green);
+}
+
+.sub-nav {
+    border-bottom: 1px solid var(--surface0);
+}
+
+/* tables: header cells and tabs in the statusline's blue */
+
+.caption span, .table-tabs .active-table-tab, .table-tabs button.active-table-tab {
+    background: var(--blue);
+    color: var(--mantle);
+    font-weight: 700;
+}
+
+.table-tabs button.table-tab {
+    background: var(--surface0);
+    color: var(--blue);
+}
+
+.table-header {
+    color: var(--lavender);
+    font-weight: 700;
+}
+
+/* deprecation and notes: the site's callout */
+
+.deprecation-block, .preview-block {
+    background: var(--mantle);
+    border-left: 2px solid var(--peach);
+    color: var(--subtext0);
+}
+
+.deprecated-label, .preview-label {
+    color: var(--peach);
+}
+
+input#search-input, input.filter-input, #page-search-input {
+    font-family: var(--mono);
+    caret-color: var(--rosewater);
+}
