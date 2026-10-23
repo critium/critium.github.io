@@ -2,8 +2,8 @@
 
 /* site layout; the colours and font are in palette.css */
 :root {
-  --gutter: 6ch;
-  --tree: 30ch;
+  --gutter: 4ch;
+  --tree: 26ch;
 }
 
 * { box-sizing: border-box; }
@@ -257,7 +257,7 @@ body.cmd-mode .sl-b, body.cmd-mode .sl-y { color: var(--peach); }
 }
 
 @media (max-width: 600px) {
-  :root { --gutter: 4.5ch; }
+  :root { --gutter: 3ch; }
   body { font-size: 13px; }
   .buf { padding-right: 16px; }
   .dashboard { padding-top: 2em; }
