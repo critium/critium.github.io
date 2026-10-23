@@ -1,0 +1,61 @@
+/*
+ * The critium bar (nav.js) at the top of every critium page on Pages: README pages and javadoc.
+ * Sized in px and given its own font, so it looks the same whatever page it sits on.
+ */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
+@import url("palette.css");
+
+.critium-bar {
+  font: 16px/1.9 var(--mono);
+  font-variant-ligatures: none;
+  background: var(--mantle);
+  color: var(--overlay0);
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* javadoc's header is already sticky; the bar rides inside it */
+header[role="banner"] .critium-bar { position: static; }
+
+.critium-bar a { text-decoration: none; }
+
+.cb-tabs, .cb-winbar {
+  display: flex;
+  align-items: baseline;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.cb-tabs { line-height: 2.2; }
+
+.critium-bar a.cb-tab {
+  padding: 0 1.8ch;
+  background: var(--crust);
+  color: var(--overlay1);
+}
+
+.critium-bar a.cb-tab:hover { color: var(--text); }
+.critium-bar a.cb-tab.active { background: var(--surface1); color: var(--green) !important; }
+
+.cb-home { color: var(--mauve) !important; font-weight: 700; }
+.cb-group { padding: 0 0.5ch 0 1ch; color: var(--overlay1); }
+.cb-group::after { content: "/"; color: var(--surface2); }
+.cb-sep { padding: 0 0.5ch; color: var(--surface1); }
+.cb-fill { flex: 1; }
+.cb-right { color: var(--blue) !important; }
+
+/* winbar: this project's sections */
+.cb-winbar {
+  background: var(--base);
+  border-bottom: 1px solid var(--surface0);
+  padding: 0.1em 1.2ch;
+}
+
+.cb-crumb { color: var(--lavender); font-weight: 700; }
+.cb-winbar .cb-sep { color: var(--overlay0); }
+.critium-bar .cb-winbar a { padding: 0 1ch; color: var(--blue); }
+.critium-bar .cb-winbar a:hover { color: var(--sapphire); }
+.critium-bar .cb-winbar a.active { color: var(--green); font-weight: 700; }
