@@ -18,6 +18,7 @@
       <a class="tab" href="/forj/">core</a>
       <a class="tab" href="/forj-codec/">codec</a>
       <a class="tab" href="/forj-http/">http</a>
+      <a class="tab" href="/forj-http-plugins/">http-plugins</a>
       <span class="tabsep">│</span>
       <a class="tab" href="https://github.com/critium/magnetite">magnetite</a>
       <span class="tabfill"></span>
@@ -50,7 +51,14 @@
               <li><a class="dir" href="/forj-http/"><span class="fold">▾</span> forj-http</a>
                 <ul>
                   <li><a class="dir" href="/forj-http/api/"><span class="fold">▸</span> api</a></li>
+                  <li><a class="dir" href="/forj-http/json/"><span class="fold">▸</span> json</a></li>
                   <li><a class="file md" href="/forj-http/">README.md</a></li>
+                </ul>
+              </li>
+              <li><a class="dir" href="/forj-http-plugins/"><span class="fold">▾</span> forj-http-plugins</a>
+                <ul>
+                  <li><a class="dir" href="/forj-http-plugins/api/"><span class="fold">▸</span> api</a></li>
+                  <li><a class="file md" href="/forj-http-plugins/">README.md</a></li>
                 </ul>
               </li>
             </ul>
@@ -84,7 +92,8 @@
             <div class="repos">
             <div class="repo"><span class="key">[1]</span><a class="name" href="/forj/" data-key="1">forj-core</a><span class="desc">the javac plugin and runtime</span><span class="links"><a href="/forj/docs/">docs</a> <a href="/forj/api/">api</a> <a href="/forj/examples/">examples</a> <a href="https://github.com/critium/forj">github</a></span></div>
             <div class="repo"><span class="key">[2]</span><a class="name" href="/forj-codec/" data-key="2">forj-codec</a><span class="desc">JSON codecs</span><span class="links"><a href="/forj-codec/docs/">docs</a> <a href="/forj-codec/api/">api</a> <a href="/forj-codec/jackson/">jackson</a> <a href="/forj-codec/tck/">tck</a> <a href="https://github.com/critium/forj-codec">github</a></span></div>
-            <div class="repo"><span class="key">[3]</span><a class="name" href="/forj-http/" data-key="3">forj-http</a><span class="desc">http4s-style server</span><span class="links"><a href="/forj-http/api/">api</a> <a href="https://github.com/critium/forj-http">github</a></span></div>
+            <div class="repo"><span class="key">[3]</span><a class="name" href="/forj-http/" data-key="3">forj-http</a><span class="desc">http4s-style server</span><span class="links"><a href="/forj-http/api/">api</a> <a href="/forj-http/json/">json</a> <a href="https://github.com/critium/forj-http">github</a></span></div>
+            <div class="repo"><span class="key">[4]</span><a class="name" href="/forj-http-plugins/" data-key="4">forj-http-plugins</a><span class="desc">Helidon backend for forj-http</span><span class="links"><a href="/forj-http-plugins/api/">api</a> <a href="https://github.com/critium/forj-http-plugins">github</a></span></div>
             </div>
           </div>
 
@@ -95,10 +104,10 @@
   <span class="k">let</span> customer <span class="o">=</span> <span class="t">CustomerDirectory</span><span class="p">.</span><span class="f">load</span><span class="p">(</span>id<span class="p">)</span>
   <span class="k">let</span> orders   <span class="o">=</span> <span class="t">OrderStore</span><span class="p">.</span><span class="f">recent_for</span><span class="p">(</span>id<span class="p">,</span> <span class="n">20</span><span class="p">)</span></pre></div>
             <div class="repos">
-            <div class="repo"><span class="key">[4]</span><a class="name" href="https://github.com/critium/magnetite" data-key="4">magnetite</a><span class="desc">the compiler, in Rust</span><span class="links"><a href="https://github.com/critium/magnetite">github</a></span></div>
+            <div class="repo"><span class="key">[5]</span><a class="name" href="https://github.com/critium/magnetite" data-key="5">magnetite</a><span class="desc">the compiler, in Rust</span><span class="links"><a href="https://github.com/critium/magnetite">github</a></span></div>
             </div>
           </div>
-          <p class="hint">hjkl move · enter open · 1-4 open a project · :api forj · : commands</p>
+          <p class="hint">hjkl move · enter open · 1-5 open a project · :api forj · : commands</p>
         </section>
       </main>
     </div>
@@ -114,7 +123,7 @@
         <span class="sl-z" id="loc">1:1</span>
       </div>
       <form class="cmdline" id="cmdform" autocomplete="off">
-        <span id="msg">"critium.github.io" 4 projects</span>
+        <span id="msg">"critium.github.io" 5 projects</span>
         <span class="cmd" id="cmdwrap" hidden>:<input id="cmd" aria-label="command" spellcheck="false" /></span>
         <span class="showcmd" id="showcmd"></span>
       </form>

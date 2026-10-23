@@ -142,6 +142,8 @@
     codec: "/forj-codec/",
     "forj-http": "/forj-http/",
     http: "/forj-http/",
+    "forj-http-plugins": "/forj-http-plugins/",
+    plugins: "/forj-http-plugins/",
     magnetite: "https://github.com/critium/magnetite",
     mgt: "https://github.com/critium/magnetite",
   };
@@ -185,7 +187,7 @@
         echo("catppuccin");
         return;
       case "h": case "help":
-        echo("hjkl move · <CR> open · 1-4 projects · gg/G · :e forj-http · :api forj-codec · :q");
+        echo("hjkl move · <CR> open · 1-5 projects · gg/G · :e forj-http · :api forj-codec · :q");
         return;
     }
     echo(`E492: Not an editor command: ${line.trim()}`, true);
