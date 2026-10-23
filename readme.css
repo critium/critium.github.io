@@ -1,0 +1,112 @@
+/*
+ * The README pages of the critium repos on Pages (critium.github.io/<repo>/), rendered by
+ * Jekyll from each repo's README.md and docs/: the site's palette, a reading column, and the
+ * site's syntax colours for code blocks (Rouge's classes).
+ */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("palette.css");
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--base);
+  color: var(--text);
+  font: 15px/1.6 var(--mono);
+  font-variant-ligatures: none;
+}
+
+::selection { background: var(--surface2); }
+
+/* top bar, like the site's tabline */
+
+.tabline {
+  position: sticky;
+  top: 0;
+  display: flex;
+  background: var(--mantle);
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.tabline a {
+  padding: 0 1.5ch;
+  background: var(--crust);
+  color: var(--overlay0);
+  text-decoration: none;
+}
+
+.tabline a:hover { color: var(--text); }
+.tabline a.active { background: var(--surface1); color: var(--green); }
+.tabline .fill { flex: 1; }
+.tabline a.right { color: var(--blue); }
+
+main {
+  max-width: 104ch;
+  padding: 1.6em 2ch 4em;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4 { font-size: inherit; line-height: inherit; font-weight: 700; margin: 1.6em 0 0.8em; }
+h1 { color: var(--red); background: color-mix(in srgb, var(--red) 18%, var(--base)); padding: 0 1ch; margin-top: 0; }
+h2 { color: var(--peach); background: color-mix(in srgb, var(--peach) 14%, var(--base)); padding: 0 1ch; }
+h3 { color: var(--yellow); }
+h4 { color: var(--green); }
+
+p, li { color: var(--text); }
+strong { color: var(--rosewater); }
+
+a { color: var(--blue); text-underline-offset: 3px; }
+a:hover { color: var(--sapphire); }
+
+ul { padding-left: 2ch; }
+li::marker { color: var(--sky); }
+
+code {
+  font: inherit;
+  background: var(--surface0);
+  padding: 0 0.5ch;
+  border-radius: 3px;
+}
+
+pre, div.highlight {
+  background: var(--mantle);
+  border-left: 2px solid var(--surface1);
+  padding: 0.6em 1.5ch;
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+pre code, div.highlight code { background: none; padding: 0; }
+div.highlight pre { margin: 0; padding: 0; border: 0; }
+
+blockquote {
+  margin: 1em 0;
+  color: var(--subtext0);
+  border-left: 2px solid var(--sapphire);
+  padding-left: 1.5ch;
+  font-style: italic;
+}
+
+table { border-collapse: collapse; margin: 1em 0; display: block; overflow-x: auto; }
+th, td { border: 1px solid var(--surface0); padding: 0.2em 1ch; text-align: left; vertical-align: top; }
+th { background: var(--mantle); color: var(--lavender); }
+tr:nth-child(even) td { background: color-mix(in srgb, var(--mantle) 60%, var(--base)); }
+
+hr { border: 0; border-top: 1px solid var(--surface0); }
+
+/* code, in the site's syntax colours (Rouge's token classes) */
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kr, .highlight .kc, .highlight .kp { color: var(--mauve); }
+.highlight .kt, .highlight .nc, .highlight .nn { color: var(--yellow); }
+.highlight .nf, .highlight .nb, .highlight .na { color: var(--blue); }
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sc, .highlight .sb, .highlight .se { color: var(--green); }
+.highlight .m, .highlight .mi, .highlight .mf, .highlight .mh, .highlight .il { color: var(--peach); }
+.highlight .o, .highlight .ow { color: var(--sky); }
+.highlight .p { color: var(--overlay2); }
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .cs, .highlight .cp { color: var(--overlay2); font-style: italic; }
+.highlight .nd { color: var(--peach); }
+.highlight .err { color: var(--red); background: none; }
+
+@media (max-width: 600px) {
+  body { font-size: 13px; }
+}
