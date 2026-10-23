@@ -90,6 +90,9 @@ blockquote {
 
 table { border-collapse: collapse; margin: 1em 0; display: block; overflow-x: auto; }
 th, td { border: 1px solid var(--surface0); padding: 0.2em 1ch; text-align: left; vertical-align: top; }
+/* cells hold values ("201 MB/s", "1 user (225 B)") that read badly split; headers may wrap
+   instead, and a table too wide for the column scrolls sideways */
+td { white-space: nowrap; font-variant-numeric: tabular-nums; }
 th { background: var(--mantle); color: var(--lavender); }
 tr:nth-child(even) td { background: color-mix(in srgb, var(--mantle) 60%, var(--base)); }
 
